@@ -1,27 +1,17 @@
-# Angular
+# Road to senior frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+Проект-шпаргалка описывающий все технологии, с которыми необходимо взаимодействовать каждому фронтенд-разработчику, начиная от основ Git, продолжая изучением JavaScript, TypeScript, фреймворка Angular и библиотеки для работы с состояниями - NGRX. Так как фронтенд-разработка не ограничивается описаным выше стеком, то так же в данном проекте реализованы подсказки по Webpack и React. Но не стоит забывать и о серверной части, поэтому буду так же описаны базовые подскази по Golang( слишком манит этот язык :) ). 
 
 ## Development server
+
+Дальше все по дефолту, методы с помощью которых можно собрать фронт, запусть локалку или тесты описаны в файле package.json, а пример запуска проекта описан ниже:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
+Данные команды ниже тоже можно считать за подсказу по работе с Angular :)
+
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Данный проект был сделан на базе `Angular CLI version 15.1.4`.
