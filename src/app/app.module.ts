@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeadBarComponent } from './components/head-bar/head-bar.component';
+import { HomeComponent } from './components/home-component/home-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeadBarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
