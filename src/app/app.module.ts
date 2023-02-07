@@ -5,16 +5,36 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadBarComponent } from './components/head-bar/head-bar.component';
 import { HomeComponent } from './components/home-component/home-component.component';
+import { RegistComponent } from './components/regist/regist.component';
+import { DashbordComponent } from './components/dashbord/dashbord.component';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule }   from '@angular/forms';
+import { PasswordModule } from 'primeng/password';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageModule } from 'primeng/message';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadBarComponent,
     HomeComponent,
+    RegistComponent,
+    DashbordComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    InputTextModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PasswordModule,
+    BrowserAnimationsModule,
+    MessageModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

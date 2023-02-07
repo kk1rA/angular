@@ -1,0 +1,41 @@
+<div class="registration">
+    <div class="window">
+        <div class="window-title">Форма регистарации</div>
+        <div class="window-body">
+            <form [formGroup]="userDataForm">
+                <div style="padding: 10px; width: 100%;">
+                    <div style="margin-bottom: 3px;">Имя пользователя*:</div>
+                    <input type="text" pInputText formControlName="userName" style="width: 100%;"> 
+                </div>
+
+                <div style="padding: 10px; width: 100%;">
+                    <div style="margin-bottom: 3px;">Email*:</div>
+                    <input type="text" pInputText formControlName="userEmail" style="width: 100%;"> 
+                </div>
+
+                <div class="p-float-label" style="padding: 10px; width: 100%;">
+                    <div style="margin-bottom: 3px;">Логин*:</div>
+                    <input type="text" pInputText formControlName="userLogin" style="width: 100%;"> 
+                </div>
+
+                <div style="padding: 10px;">
+                    <div style="margin-bottom: 3px;">Пароль*:</div>
+                    <p-password formControlName="userPassword" [toggleMask]="true"></p-password>
+                </div>
+
+                <div class="warning">* - обязательный элемент формы</div>
+            </form>
+            <button 
+                style="margin: 10px;" 
+                pButton 
+                pRipple 
+                type="button" 
+                label="Регистрация" 
+                class="p-button-rounded p-button-secondary"
+                [disabled]="userDataForm.invalid"
+                (click)="sentForm()">
+            </button>
+        </div>
+        
+    </div>
+</div>
