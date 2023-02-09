@@ -11,7 +11,9 @@ export class UserService {
 
   constructor(
     private http: HttpClient,
-  ) { }
+  ) {
+    localStorage.setItem('isAuth', 'false');
+   }
 
   addUser(user: any): Observable<any> {
     return this.http.post(`${this.url}/account/reg`, user);
@@ -28,6 +30,7 @@ export class UserService {
   storeUser(token: string, user: any): void {
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('isAuth', 'true');
   }
 
 }

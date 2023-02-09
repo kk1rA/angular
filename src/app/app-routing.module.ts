@@ -5,7 +5,7 @@ import { DashbordComponent } from './components/dashbord/dashbord.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'dashbord', component:  DashbordComponent, canActivate: [false] },
+  { path: 'dashbord', component:  DashbordComponent, canActivate: [Boolean(localStorage.getItem('isAuth'))] },
   { path: 'about', component: HomeComponent },
   { path: '**', redirectTo: '/' },
 ];
