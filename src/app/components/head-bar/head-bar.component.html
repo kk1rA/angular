@@ -1,10 +1,23 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 border-bottom">
-    <a [routerLink]="['/']" class="d-flex align-items-center text-dark text-decoration-none">
-      <span class="fs-4">BRCast</span>
+<header class="header">
+  <div class="header-link">
+    <p-button styleClass="px-3">
+      <ng-template pTemplate="content">
+          <img alt="logo" src="https://primefaces.org/cdn/primeng/images/primeng-icon-white.svg" style="width: 1.5rem"/>
+      </ng-template>
+    </p-button>
+    <a [routerLink]="['/']" class="header-link-item">
+      Breadcrumb
     </a>
+  </div>
 
-    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-      <a class="me-3 py-2 text-dark text-decoration-none" [routerLink]="['/about']">О проекте</a>
-      <a class="py-2 text-dark text-decoration-none" [routerLink]="['/regist']">Войти/Регистрация</a>
-    </nav>
-</div>
+  <div class="header-buttons">
+    <button pButton pRipple type="button" icon="pi pi-dollar" class="p-button p-button-text"></button>
+    <button pButton pRipple type="button" label="Задать вопрос" class="p-button-help p-button-text"></button>
+    <button pButton pRipple type="button" label="О проекте" class="p-button-warning p-button-text"></button>
+    <button pButton pRipple type="button" label="Войти" (click)="display = true" class="p-button-info p-button-text"></button>
+  </div>
+</header>
+
+<p-sidebar [(visible)]="display" [showCloseIcon]="false">
+  <app-regist></app-regist>
+</p-sidebar>

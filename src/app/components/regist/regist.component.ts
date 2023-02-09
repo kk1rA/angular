@@ -12,6 +12,9 @@ import { UserService } from 'src/app/core/services/user.service';
 export class RegistComponent {
 
   userDataForm : FormGroup;
+  userLoginForm : FormGroup;
+  choise: boolean = true;
+  stateOptions: any[];
 
   constructor(
     private userService: UserService,
@@ -26,6 +29,23 @@ export class RegistComponent {
       "userLogin": new FormControl("", Validators.required),
       "userPassword": new FormControl("", Validators.required),
     });
+    this.userLoginForm = new FormGroup({
+      "userLogin": new FormControl("", Validators.required),
+      "userPassword": new FormControl("", Validators.required),
+    });
+    this.stateOptions = [{label: 'Войти', value: true}, {label: 'Регистрация', value: false}];
+  }
+
+  sentAuthForm(): void {
+    this.userService.authUser(this.userLoginForm.value).subscribe(data => {
+      if(!data.success) {
+        console.log('ERROR');
+        console.log(data);
+      } else {
+        this.userService.storeUser(data.token, data.user);
+        this.router.navigate(['/dashbord']);
+      }
+    })
   }
 
   sentForm(): void {

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./head-bar.component.scss']
 })
 export class HeadBarComponent {
-
+  display: boolean = false;
 }

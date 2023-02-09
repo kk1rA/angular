@@ -15,6 +15,9 @@ import { PasswordModule } from 'primeng/password';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {SidebarModule} from 'primeng/sidebar';
+import {SelectButtonModule} from 'primeng/selectbutton';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MessageModule,
     HttpClientModule,
+    OverlayPanelModule,
+    SidebarModule,
+    SelectButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
